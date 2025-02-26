@@ -1,0 +1,49 @@
+body{
+    color: darkgray;
+   
+    
+}
+
+#trupp_div{
+    display:grid;
+    height: 140vh;
+    width: 100%;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 20vh 40vh 40vh 40vh;
+    grid-template-areas: 
+    'nav hd'
+    'ts1 ts1'
+    'ts2 ts2'
+    'ts3 ts3';
+
+}
+
+.notindex_nav{
+    grid-area: nav;
+    border: black solid;
+    border-radius: 1rem;
+    background-color: darkblue;
+}
+
+header{
+    grid-area:hd;
+    
+}
+#trupp_section1{
+    grid-area: ts1;
+    background-color: darkblue;
+    border: black solid;
+    border-radius: 1rem;
+}
+#trupp_section2{
+    grid-area: ts2;
+    background-color: darkblue;
+    border: black solid;
+    border-radius: 1rem;
+}
+#trupp_section3{
+    grid-area: ts3;
+    background-color: darkblue;
+    border: black solid;
+    border-radius: 1rem;
+}
