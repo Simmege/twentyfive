@@ -1,5 +1,5 @@
 body{
-    color: darkgray;
+    background-color: darkgray;
    
     
 }
@@ -8,8 +8,9 @@ body{
     display:grid;
     height: 140vh;
     width: 100%;
+    gap:5px;
     grid-template-columns: 10% 90%;
-    grid-template-rows: 20vh 40vh 40vh 40vh;
+    grid-template-rows: 20vh 60vh 60vh 60vh;
     grid-template-areas: 
     'nav hd'
     'ts1 ts1'
@@ -22,7 +23,7 @@ body{
     grid-area: nav;
     border: black solid;
     border-radius: 1rem;
-    background-color: darkblue;
+    background-color: #061e44;
 }
 
 header{
@@ -31,19 +32,51 @@ header{
 }
 #trupp_section1{
     grid-area: ts1;
-    background-color: darkblue;
+    background-color: #061e44;
     border: black solid;
     border-radius: 1rem;
 }
 #trupp_section2{
     grid-area: ts2;
-    background-color: darkblue;
+    background-color: #061e44;
     border: black solid;
     border-radius: 1rem;
 }
 #trupp_section3{
     grid-area: ts3;
-    background-color: darkblue;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+}
+
+
+
+.trupp_section{
+    display:grid;
+    height:100%;
+    width:100%;
+    grid-template-rows: 100%;
+    grid-template-columns: 5% 25% 5% 25% 5% 25% 5%;
+    grid-template-areas: 
+    '. pl1 . pl2 . pl3 .';
+
+}
+
+
+.player1{
+    grid-area: pl1;
+    border: black solid;
+    border-radius: 1rem;
+}
+
+.player2{
+    grid-area: pl2;
+    border: black solid;
+    border-radius: 1rem;
+
+}
+.player3{
+    grid-area: pl3;
     border: black solid;
     border-radius: 1rem;
 }
