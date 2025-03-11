@@ -1,5 +1,6 @@
 body{
     background-color: darkgray;
+
    
     
 }
@@ -7,12 +8,13 @@ body{
 #trupp_div{
     display:grid;
     height: 140vh;
-    width: 100%;
+    width: 100vw;
     gap:5px;
     grid-template-columns: 10% 90%;
-    grid-template-rows: 20vh 60vh 60vh 60vh;
+    grid-template-rows: 20vh 40vh 60vh 60vh 60vh;
     grid-template-areas: 
     'nav hd'
+    'tri tri'
     'ts1 ts1'
     'ts2 ts2'
     'ts3 ts3';
@@ -35,6 +37,8 @@ header{
     background-color: #061e44;
     border: black solid;
     border-radius: 1rem;
+    
+    
 }
 #trupp_section2{
     grid-area: ts2;
@@ -54,29 +58,84 @@ header{
 .trupp_section{
     display:grid;
     height:100%;
-    width:100%;
+    width:125vw;
     grid-template-rows: 100%;
-    grid-template-columns: 5% 25% 5% 25% 5% 25% 5%;
+    grid-template-columns: 5vw 25vw 5vw 25vw 5vw 25vw 5vw 25vw 5vw;
     grid-template-areas: 
-    '. pl1 . pl2 . pl3 .';
+    '. pl1 . pl2 . pl3 . pl4 .';
+    overflow-x: auto;
+    white-space: nowrap;
 
 }
 
 
 .player1{
     grid-area: pl1;
-    border: black solid;
+    border: white solid;
     border-radius: 1rem;
+    margin: 3px;
 }
 
 .player2{
     grid-area: pl2;
-    border: black solid;
+    border: white solid;
     border-radius: 1rem;
+    margin: 3px;
+    
 
 }
 .player3{
     grid-area: pl3;
-    border: black solid;
+    border: white solid;
     border-radius: 1rem;
+    margin: 3px;
+}
+.player4{
+    grid-area: pl4;
+    border: white solid;
+    border-radius: 1rem;
+    margin: 3px;
+}
+
+#trupp_intro{
+    grid-area: tri;
+    background-color: #061e44;
+    border: balck solid;
+    border-radius: 1rem;
+}
+
+
+.trupp_player_section{
+    display:grid;
+    height:100%;
+    width:100%;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'plp'
+    'pld';
+}
+
+.playerpic{
+    grid-area: plp;
+    border-radius: 100%;
+    border: white solid;
+    
+}
+.playerdescription{
+    grid-area: pld;
+    border-top: 3px white solid;
+    
+
+    
+}
+header{
+    border:black solid;
+    border-radius: 1rem;
+}
+
+.rubrik_blue{
+    text-align: center;
+    color: white;
+    font-size: 20px;
 }
