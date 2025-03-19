@@ -1,8 +1,75 @@
 body{
     background-color: darkgray;
-
-   
+    padding: 0;
     
+}
+
+
+
+.notindex_nav{
+    grid-area: nav;
+    border: black solid;
+    border-radius: 1rem;
+    background-color: #061e44;
+
+}
+
+header{
+    grid-area:hd;
+    
+}
+#trupp_section1{
+    grid-area: ts1;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+    overflow-x: scroll;
+    
+    
+}
+#trupp_section2{
+    grid-area: ts2;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+    overflow-x: scroll;
+}
+#trupp_section3{
+    grid-area: ts3;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+    overflow-x: scroll;
+}
+
+
+@media screen and (min-width:800px){
+
+    nav, header, section, div, footer {
+        box-sizing:border-box;
+    }
+.trupp_section{
+    display:grid;
+    height:100%;
+    width:125vw;
+    grid-template-rows: 100%;
+    grid-template-columns: 5vw 25vw 5vw 25vw 5vw 25vw 5vw 25vw 5vw;
+    grid-template-areas: 
+    '. pl1 . pl2 . pl3 . pl4 .';
+
+  
+
+}
+
+.trupp_player_section{
+    display:grid;
+    height:100%;
+    width:100%;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    'plp'
+    'pld';
 }
 
 #trupp_div{
@@ -18,62 +85,95 @@ body{
     'ts1 ts1'
     'ts2 ts2'
     'ts3 ts3';
+    overflow-x: hidden;
+
+}
+.rubrik_blue{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
 
 }
 
-.notindex_nav{
-    grid-area: nav;
-    border: black solid;
-    border-radius: 1rem;
-    background-color: #061e44;
-}
 
-header{
-    grid-area:hd;
+
+
+
+@media screen and (max-width:800px){
+    #trupp_div{
+        display:grid;
+        height: 120vh;
+        width:100vw;
+        gap:5px;
+        grid-template-columns: 30vw 5vw 30vw 5vw 1fr;
+        grid-template-rows: 20vh 30vh 70vh;
+        grid-template-areas:
+        'nav hd hd hd hd'
+        'tri tri tri tri tri'
+        'ts1 . ts2 . ts3';
+    }
+    .trupp_section{
+        display:grid;
+        height:100%;
+        width:100%;
+        grid-template-rows: 5vw 25vw 5vw 25vw 5vw 25vw 5vw 25vw 5vw;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        '.'
+        'pl1'
+        '.'
+        'pl2'
+        '.'
+        'pl3'
+        '.'
+        'pl4'
+        '.';
     
-}
-#trupp_section1{
-    grid-area: ts1;
-    background-color: #061e44;
-    border: black solid;
-    border-radius: 1rem;
+      
     
+    }
+    .trupp_player_section{
+        display:grid;
+        height:100%;
+        width:100%;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'plp'
+        'pld';
+    }
+    .rubrik_blue{
+        text-align: center;
+        color: white;
+        font-size: 10px;
+    }
     
-}
-#trupp_section2{
-    grid-area: ts2;
-    background-color: #061e44;
-    border: black solid;
-    border-radius: 1rem;
-}
-#trupp_section3{
-    grid-area: ts3;
-    background-color: #061e44;
-    border: black solid;
-    border-radius: 1rem;
-}
+
+    #kontakt_div{
+        display: grid;
+        height: 100vh;
+        width:100vw;
+        grid-template-rows: 20vh 80vh;
+        grid-template-columns: 30vw 1fr;
+        grid-template-areas: 
+        'nav hd'
+        'ma ma';
+
+    }
 
 
-
-.trupp_section{
-    display:grid;
-    height:100%;
-    width:125vw;
-    grid-template-rows: 100%;
-    grid-template-columns: 5vw 25vw 5vw 25vw 5vw 25vw 5vw 25vw 5vw;
-    grid-template-areas: 
-    '. pl1 . pl2 . pl3 . pl4 .';
-    overflow-x: auto;
-    white-space: nowrap;
+    nav, header, section, div, footer {
+        box-sizing:border-box;
+    }
 
 }
-
-
 .player1{
     grid-area: pl1;
     border: white solid;
     border-radius: 1rem;
     margin: 3px;
+
 }
 
 .player2{
@@ -102,19 +202,11 @@ header{
     background-color: #061e44;
     border: balck solid;
     border-radius: 1rem;
+    padding: 5px;
 }
 
 
-.trupp_player_section{
-    display:grid;
-    height:100%;
-    width:100%;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-    'plp'
-    'pld';
-}
+
 
 .playerpic{
     grid-area: plp;
@@ -129,13 +221,21 @@ header{
 
     
 }
-header{
+.header{
     border:black solid;
     border-radius: 1rem;
 }
 
-.rubrik_blue{
-    text-align: center;
-    color: white;
-    font-size: 20px;
+
+.breadtext{
+    color:white;
+    text-align: left;
+}
+
+.rubrik_grey{
+    color:white;
+}
+
+.main{
+    grid-area: ma;
 }
