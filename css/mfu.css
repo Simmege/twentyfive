@@ -1,6 +1,7 @@
 body{
     background-color: darkgray;
     padding: 0;
+    margin: 0;
     
 }
 
@@ -9,15 +10,12 @@ body{
 .notindex_nav{
     grid-area: nav;
     border: black solid;
-    border-radius: 1rem;
     background-color: #061e44;
+    gap:0;
 
 }
 
-header{
-    grid-area:hd;
-    
-}
+
 #trupp_section1{
     grid-area: ts1;
     background-color: #061e44;
@@ -74,8 +72,6 @@ header{
 
 #trupp_div{
     display:grid;
-    height: 140vh;
-    width: 100vw;
     gap:5px;
     grid-template-columns: 10% 90%;
     grid-template-rows: 20vh 40vh 60vh 60vh 60vh;
@@ -93,6 +89,30 @@ header{
     color: white;
     font-size: 20px;
 }
+#index_div{
+
+    display:grid;
+    grid-template-rows: 20vh 40vh 25vh 15vh;
+    grid-template-columns: 10% 90%;
+    gap:5px;
+    grid-template-areas: 
+    'in hd'
+    'im im'
+    'is is'
+    'ft ft';
+    overflow:hidden;
+}
+
+#kontakt_div{
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 20vh 80vh;
+    grid-template-columns: 10% 90%;
+    grid-template-areas:
+    'nav hd'
+    'ma ma';
+}
+
 
 }
 
@@ -103,8 +123,6 @@ header{
 @media screen and (max-width:800px){
     #trupp_div{
         display:grid;
-        height: 120vh;
-        width:100vw;
         gap:5px;
         grid-template-columns: 30vw 5vw 30vw 5vw 1fr;
         grid-template-rows: 20vh 30vh 70vh;
@@ -152,7 +170,6 @@ header{
 
     #kontakt_div{
         display: grid;
-        height: 100vh;
         width:100vw;
         grid-template-rows: 20vh 80vh;
         grid-template-columns: 30vw 1fr;
@@ -160,6 +177,19 @@ header{
         'nav hd'
         'ma ma';
 
+    }#index_div{
+        display: grid;
+        grid-template-rows: 20vh 30vh 25vh 25vh;
+        grid-template-columns: 20% 80%;
+        gap:5px;
+        grid-template-areas: 
+        'in hd'
+        'im im'
+        'is is'
+        'ft ft'
+        ;
+
+        
     }
 
 
@@ -202,7 +232,7 @@ header{
     background-color: #061e44;
     border: balck solid;
     border-radius: 1rem;
-    padding: 5px;
+    
 }
 
 
@@ -223,7 +253,8 @@ header{
 }
 .header{
     border:black solid;
-    border-radius: 1rem;
+    grid-area: hd;
+    gap:0;
 }
 
 
@@ -238,4 +269,31 @@ header{
 
 .main{
     grid-area: ma;
+    border:black solid;
+    border-radius: 1rem;
+}
+
+#index_main{
+    grid-area: im;
+    background-color: #061e44;
+    border:black solid;
+    border-radius: 1rem;
+
+}
+
+#index_section{
+    grid-area:is;
+    background-color: #061e44;
+    border:black solid;
+    border-radius: 1rem;
+}
+
+footer{
+    grid-area: ft;
+}
+
+#index_nav{
+    grid-area:in;
+    background-color: #061e44;
+    border:black solid;
 }
