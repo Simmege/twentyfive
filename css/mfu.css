@@ -2,6 +2,7 @@ body{
     background-color: darkgray;
     padding: 0;
     margin: 0;
+
     
 }
 
@@ -11,7 +12,10 @@ body{
     grid-area: nav;
     border: black solid;
     background-color: #061e44;
-    gap:0;
+    margin-bottom:5px;
+    display:flex;
+    justify-content: center;
+    justify-content: left;
 
 }
 
@@ -58,6 +62,16 @@ body{
   
 
 }
+#matcher_div{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 20vh 80vh;
+    grid-template-areas: 
+    'nav hd'
+    'ma ma';
+    overflow: hidden;
+    
+}
 
 .trupp_player_section{
     display:grid;
@@ -72,7 +86,6 @@ body{
 
 #trupp_div{
     display:grid;
-    gap:5px;
     grid-template-columns: 10% 90%;
     grid-template-rows: 20vh 40vh 60vh 60vh 60vh;
     grid-template-areas: 
@@ -81,20 +94,22 @@ body{
     'ts1 ts1'
     'ts2 ts2'
     'ts3 ts3';
-    overflow-x: hidden;
+    overflow: scroll;
+    overflow: auto;
+
 
 }
 .rubrik_blue{
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 #index_div{
 
     display:grid;
     grid-template-rows: 20vh 40vh 25vh 15vh;
     grid-template-columns: 10% 90%;
-    gap:5px;
+
     grid-template-areas: 
     'in hd'
     'im im'
@@ -105,12 +120,72 @@ body{
 
 #kontakt_div{
     display: grid;
-    gap: 5px;
-    grid-template-rows: 20vh 80vh;
+    grid-template-rows: 20vh 40vh 40vh;
     grid-template-columns: 10% 90%;
     grid-template-areas:
     'nav hd'
-    'ma ma';
+    'km km'
+    'ks ks';
+
+    overflow: hidden;
+}
+.size_font{
+    color:black;
+    font-size:40px;
+    margin-bottom: 5px;
+}
+#kontakt_main, #kontakt_section{
+    border: black solid;
+    border-radius: 1rem;
+}
+#resultat{
+       
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 1fr ;
+    grid-template-areas: 
+    'r1'
+    'r2'
+    'r3'
+    'r4'
+    'r5'
+    'r6'
+    'r7'
+    'r8'
+    'r9'
+    'r10'
+    'r11'
+    'r12'
+    'r13'
+    'r14'
+    'r15';
+
+}
+.rubrik_link{
+    display: grid;
+    justify-content: left;
+    margin-left: 2px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    
+
+}
+.bilder_index{
+    height: 30vh;
+    width: auto;
+    border: black solid;
+    border-radius: 1rem;
+
+}
+#ps{
+    height: 30vh;
+    width: auto;
+    border: black solid;
+    border-radius: 1rem;
+
 }
 
 
@@ -121,15 +196,19 @@ body{
 
 
 @media screen and (max-width:800px){
+    
+    #kontakt_main, #kontakt_section{
+        border: black solid;
+        border-radius: 1rem;
+    }
     #trupp_div{
         display:grid;
-        gap:5px;
-        grid-template-columns: 30vw 5vw 30vw 5vw 1fr;
+        grid-template-columns: 20vw 10vw 5vw 30vw 5vw 1fr;
         grid-template-rows: 20vh 30vh 70vh;
         grid-template-areas:
-        'nav hd hd hd hd'
-        'tri tri tri tri tri'
-        'ts1 . ts2 . ts3';
+        'nav hd hd hd hd hd'
+        'tri tri tri tri tri tri'
+        'ts1 ts1 . ts2 . ts3';
     }
     .trupp_section{
         display:grid;
@@ -170,24 +249,29 @@ body{
 
     #kontakt_div{
         display: grid;
-        width:100vw;
-        grid-template-rows: 20vh 80vh;
-        grid-template-columns: 30vw 1fr;
+   
+        grid-template-rows: 20vh 40vh 40vh;
+        grid-template-columns: 20% 1fr;
         grid-template-areas: 
         'nav hd'
-        'ma ma';
+        'km km'
+        'ks ks';
+       
+        overflow: hidden;
+        
 
     }#index_div{
         display: grid;
-        grid-template-rows: 20vh 30vh 25vh 25vh;
+        grid-template-rows: 15vh 30vh 40vh 15vh;
         grid-template-columns: 20% 80%;
-        gap:5px;
+
         grid-template-areas: 
         'in hd'
         'im im'
         'is is'
-        'ft ft'
-        ;
+        'ft ft';
+        overflow: hidden;
+
 
         
     }
@@ -196,6 +280,72 @@ body{
     nav, header, section, div, footer {
         box-sizing:border-box;
     }
+
+    #matcher_div{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 20vh 80vh;
+        grid-template-areas: 
+        'nav hd'
+        'ma ma';
+        overflow: hidden;
+        
+    }
+    .size_font{
+        color:black;
+
+        font-size:20px;
+
+    }
+    #resultat{
+       
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 6% 1fr ;
+        grid-template-areas: 
+        'r1'
+        'r2'
+        'r3'
+        'r4'
+        'r5'
+        'r6'
+        'r7'
+        'r8'
+        'r9'
+        'r10'
+        'r11'
+        'r12'
+        'r13'
+        'r14'
+        'r15';
+
+
+    }
+    .rubrik_link{
+    display: grid;
+    justify-content: left;
+    margin-left: 2px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    
+
+}
+.bilder_index{
+display: none;
+
+}
+#ps{
+    height: 25vh;
+    width: auto;
+    border: black solid;
+    border-radius: 1rem;
+
+}
+
+
 
 }
 .player1{
@@ -230,7 +380,7 @@ body{
 #trupp_intro{
     grid-area: tri;
     background-color: #061e44;
-    border: balck solid;
+    border: black solid;
     border-radius: 1rem;
     
 }
@@ -242,6 +392,7 @@ body{
     grid-area: plp;
     border-radius: 100%;
     border: white solid;
+    background-color: gray;
     
 }
 .playerdescription{
@@ -254,7 +405,7 @@ body{
 .header{
     border:black solid;
     grid-area: hd;
-    gap:0;
+    margin-bottom: 5px;;
 }
 
 
@@ -264,13 +415,19 @@ body{
 }
 
 .rubrik_grey{
-    color:white;
+    color:black;
+    display: flex;
+    justify-content: center;
+    font-size:40px;
+
 }
 
 .main{
     grid-area: ma;
-    border:black solid;
+    border:  black solid;
     border-radius: 1rem;
+
+    background-color: #061e44;
 }
 
 #index_main{
@@ -278,7 +435,9 @@ body{
     background-color: #061e44;
     border:black solid;
     border-radius: 1rem;
-
+    display: flex;
+    justify-content: center;
+  
 }
 
 #index_section{
@@ -286,14 +445,173 @@ body{
     background-color: #061e44;
     border:black solid;
     border-radius: 1rem;
+ 
 }
 
 footer{
     grid-area: ft;
+    border: black solid;
+    display: flex;
+    justify-content: center;
 }
 
 #index_nav{
     grid-area:in;
     background-color: #061e44;
     border:black solid;
+    margin-bottom: 5px;
+}
+
+.bild{
+    width: 50%;
+    display: flex;
+   
+}
+
+.breadtext{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 5px;
+}
+
+a{
+   
+    color: black;
+}
+
+.link{
+    display: flex;
+    justify-content: left;
+
+    width: 50%;
+}
+
+#kontakt_section{
+    grid-area: ks;
+    background-color: #061e44;
+
+}
+
+#kontakt_main{
+    grid-area: km;
+    background-color: #061e44;
+
+}
+
+
+
+.meny_knapp{
+    cursor: pointer;
+    display: inline;
+}
+
+.meny_knapp i.material-icons{
+    font-size: 5rem;
+    color:darkgray
+}
+
+.meny{
+    height: 100vh;
+    width: 20vw;
+    background-color: #061e44;
+    position: fixed;
+    top: 0;
+    left: -90vw;
+    transition: left 0.3s;
+    box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+
+}
+.lager{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    display: none;
+    z-index: 5;
+}
+.show{
+    left: 0;
+}
+.lager.visible{
+    display: block;
+}
+#resultat1{
+    grid-area:r1;
+    background-color: #061e44;
+    border: transparent solid;
+    border-radius: 1rem;
+}
+#resultat2{
+    grid-area:r2;
+    background-color: #061e44;
+}
+#resultat3{
+    grid-area:r3;
+    background-color: #061e44;
+}
+#resultat4{
+    grid-area:r4;
+    background-color: #061e44;
+}
+#resultat5{
+    grid-area:r5;
+    background-color: #061e44;
+}
+#resultat6{
+    grid-area:r6;
+    background-color: #061e44;
+}
+#resultat7{
+    grid-area:r7;
+    background-color: #061e44;
+}
+#resultat8{
+    grid-area:r8;
+    background-color: #061e44;
+}
+#resultat9{
+    grid-area:r9;
+    background-color: #061e44;
+}
+#resultat10{
+    grid-area:r10;
+    background-color: #061e44;
+}
+#resultat11{
+    grid-area:r11;
+    background-color: #061e44;
+}
+#resultat12{
+    grid-area:r12;
+    background-color: #061e44;
+}
+#resultat13{
+    grid-area:r13;
+    background-color: #061e44;
+}
+#resultat14{
+    grid-area:r14;
+    background-color: #061e44;
+}
+#resultat15{
+    grid-area:r15;
+    background-color: #061e44;
+    border: transparent solid;
+    border-radius: 1rem;
+}
+
+.rubrik_blue1{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+   
 }
