@@ -2,6 +2,15 @@ body{
     background-color: darkgray;
     padding: 0;
     margin: 0;
+    
+
+    
+}
+#index_body{
+    background-color: darkgray;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 
     
 }
@@ -36,9 +45,14 @@ body{
 
 @media screen and (min-width:800px){
 
-    nav, header, section, div, footer {
-        box-sizing:border-box;
-    }
+#karta{
+    height: 240px;
+    width: auto;
+    border: black solid;
+    border-radius: 1rem;
+    position: absolute;
+    left: 3px;
+}
 .trupp_section{
     display:grid;
     height:100%;
@@ -47,17 +61,29 @@ body{
     grid-template-columns: 5vw 25vw 5vw 25vw 5vw 25vw 5vw 25vw 5vw;
     grid-template-areas: 
     '. pl1 . pl2 . pl3 . pl4 .';
-
   
 
 }
+.laganda{
+    height: auto;
+    width: 140px;
+    border: black solid;
+    border-radius: 1rem;
+    
+   
+    
+    
+
+}
+
+
 #matcher_div{
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 40% 50%;
     grid-template-rows: 20vh 80vh;
     grid-template-areas: 
-    'nav hd'
-    'ma ma';
+    'nav hd hd'
+    'ma ma mse';
     overflow: hidden;
     
 }
@@ -91,30 +117,34 @@ body{
 .rubrik_blue{
     text-align: center;
     color: white;
-    font-size: 18px;
+    font-size: 32px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    gap: 0;
+    margin-bottom: 0;
 }
 #index_div{
 
     display:grid;
-    grid-template-rows: 20vh 40vh 25vh 15vh;
-    grid-template-columns: 10% 90%;
-
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-columns: 10% 75% 15%;
     grid-template-areas: 
-    'nav hd'
-    'im im'
-    'is is'
-    'ft ft';
-    overflow:hidden;
+    'nav hd hd'
+    'im im as'
+    'is is as';
+    overflow: hidden;
+
 }
 
 #kontakt_div{
     display: grid;
     grid-template-rows: 20vh 40vh 40vh;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 10% 70% 20%;
     grid-template-areas:
-    'nav hd'
-    'km km'
-    'ks ks';
+    'nav hd kas'
+    'km km kas'
+    'ks ks kas';
 
     overflow: hidden;
 }
@@ -123,10 +153,7 @@ body{
     font-size:40px;
     margin-bottom: 5px;
 }
-#kontakt_main, #kontakt_section{
-    border: black solid;
-    border-radius: 1rem;
-}
+
 #resultat{
        
     display: grid;
@@ -156,15 +183,18 @@ body{
     display: grid;
     justify-content: left;
     margin-left: 2px;
-    font-size: 30px;
+    font-size: 45px;
     color: white;
     text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     
 
 }
 .bilder_index{
     height: 30vh;
-    width: auto;
+    width: 20vw;
     border: black solid;
     border-radius: 1rem;
 
@@ -177,7 +207,7 @@ body{
 
 }.meny{
     height: 100vh;
-    width: 20vw;
+    width: 30vw;
     background-color: #061e44;
     position: fixed;
     top: 0;
@@ -187,7 +217,74 @@ body{
     z-index: 10;
 
 }
+.player{
+    width:200px;
+    height: 250px;
+    
+}
+.rubrik_grey_header{
+    color:black;
+    font-size:52px;
+    position: absolute;
+    left: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;;
+    font-style: normal;
 
+}
+
+#player_special{
+    height:150px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+}
+
+.breadtext{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 5px;
+    color:white;
+    text-align: left;
+    font-size: 20px;
+
+}
+
+
+.rubrik_blue1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 1px;
+    color:white;
+    text-align: left;
+    font-size: 15px;
+    gap: 0;
+}
+
+#credtext{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 5px;
+    color:white;
+    text-align: left;
+    font-size: 20px;
+}
+#kontakt_aside{
+    grid-area: kas;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+    position: relative;
+}
+#x2{
+    display: none;
+}
 
 }
 
@@ -195,12 +292,72 @@ body{
 
 
 
+
 @media screen and (max-width:800px){
-    
-    #kontakt_main, #kontakt_section{
+   
+   
+    #kontakt_aside{
+        display: none;
+    }
+    .laganda{
+        height: 150px;
+        width: 150px;
         border: black solid;
         border-radius: 1rem;
+
+
+
+
     }
+
+    #credtext{
+        display: none;
+    }
+
+    #reklam2{
+        height: 50px;
+        width: 375px;
+        
+    }
+    
+    
+    .breadtext{
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        margin: 5px;
+        color:white;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .rubrik_blue1{
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;
+        margin: 5px;
+        color:white;
+        text-align: left;
+        font-size: 12px;
+        gap:0;
+        
+    }
+   
+   
+    .player{
+        width: 90px; 
+        height: 112.5px;
+    }
+    #player_special{
+        height:60px;
+        width: 80;
+        position: absolute;
+        bottom: 0;
+    }
+    
+
     #trupp_div{
         display:grid;
         grid-template-columns: 20vw 10vw 5vw 30vw 5vw 1fr;
@@ -243,7 +400,10 @@ body{
     .rubrik_blue{
         text-align: center;
         color: white;
-        font-size: 10px;
+        font-size: 19px;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
     }
     
 
@@ -262,14 +422,14 @@ body{
 
     }#index_div{
         display: grid;
-        grid-template-rows: 15vh 30vh 40vh 15vh;
+        grid-template-rows: 20vh 30vh 40vh 15vh;
         grid-template-columns: 20% 80%;
 
         grid-template-areas: 
-        'nav hd'
-        'im im'
-        'is is'
-        'ft ft';
+        'nav hd '
+        'im im '
+        'is is '
+        'ft ft ';
         overflow: hidden;
 
 
@@ -277,17 +437,15 @@ body{
     }
 
 
-    nav, header, section, div, footer {
-        box-sizing:border-box;
-    }
 
     #matcher_div{
         display: grid;
         grid-template-columns: 20% 80%;
-        grid-template-rows: 20vh 80vh;
+        grid-template-rows: 20vh 80vh 80vh;
         grid-template-areas: 
         'nav hd'
-        'ma ma';
+        'ma ma'
+        'mse mse';
         overflow: hidden;
         
     }
@@ -327,9 +485,12 @@ body{
     display: grid;
     justify-content: left;
     margin-left: 2px;
-    font-size: 20px;
+    font-size: 31px;
     color: white;
     text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     
 
 }
@@ -353,10 +514,32 @@ display: none;
     transition: left 0.3s;
     box-shadow: 10px 0px 21px -10px rgba(0,0,0,0.75);
     z-index: 10;
+    
 
 }
 
+.rubrik_grey_header{
+    color:black;
+    font-size:51px;
+    position: absolute;
+    left: 0;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;;
+    font-style: normal;
 
+}#x2{
+    bottom:30px;
+    left: 3px;
+    height: 15px;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color: black;
+}
 
 }
 .player1{
@@ -382,10 +565,13 @@ display: none;
     margin: 3px;
 }
 .player4{
+
     grid-area: pl4;
     border: white solid;
     border-radius: 1rem;
     margin: 3px;
+
+    
 }
 
 #trupp_intro{
@@ -397,14 +583,32 @@ display: none;
 }
 
 
+#kontakt_main{
+    border: black solid;
+    border-radius: 1rem;
+    grid-area: km;
+    background-color: #061e44;
+}
 
+#kontakt_section{
+    grid-area: ks;
+    border: black solid;
+    border-radius: 1rem;
+    position: relative;
+    background-color: #061e44;
+
+}
 
 .playerpic{
+    display: flex;
     grid-area: plp;
-    border-radius: 100%;
     border: white solid;
+    border-radius: 10rem;
     background-color: gray;
-    
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0;
+
 }
 .playerdescription{
     grid-area: pld;
@@ -414,32 +618,17 @@ display: none;
     
 }
 .header{
+
     border:black solid;
     grid-area: hd;
-    margin-bottom: 5px;;
+    position: relative;
+    
 }
 
 
-.breadtext{
-    color:white;
-    text-align: left;
-}
 
-.rubrik_grey{
-    color:black;
-    display: flex;
-    justify-content: center;
-    font-size:40px;
 
-}
 
-.main{
-    grid-area: ma;
-    border:  black solid;
-    border-radius: 1rem;
-
-    background-color: #061e44;
-}
 
 #index_main{
     grid-area: im;
@@ -470,7 +659,6 @@ footer{
     grid-area:nav;
     background-color: #061e44;
     border:black solid;
-    margin-bottom: 5px;
 }
 
 .bild{
@@ -479,13 +667,7 @@ footer{
    
 }
 
-.breadtext{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    margin: 5px;
-}
+
 
 a{
    
@@ -499,17 +681,6 @@ a{
     width: 50%;
 }
 
-#kontakt_section{
-    grid-area: ks;
-    background-color: #061e44;
-
-}
-
-#kontakt_main{
-    grid-area: km;
-    background-color: #061e44;
-
-}
 
 
 
@@ -605,13 +776,69 @@ a{
     border-radius: 1rem;
 }
 
-.rubrik_blue1{
-    text-align: center;
-    color: white;
-    font-size: 15px;
+
+#index_aside{
+    position: relative;
+    grid-area: as;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+
+}
+
+
+#matcher_section{
+    grid-area: mse;
+    background-color: #061e44;
+    border: black solid;
+    border-radius: 1rem;
+    overflow-y: scroll;
+
+}
+
+#matcher_main{
+    overflow-y: scroll;
+    grid-area: ma;
+    border:  black solid;
+    border-radius: 1rem;
+
+    background-color: #061e44;
+}
+
+
+
+
+#reklam{
+    position: absolute;
+    top: 100px;
+    height: 275px;
+    width: auto;
+    z-index: 1;
+}
+#x{
+    bottom:350px;
+    left: 3px;
+    height: 15px;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-   
+    color: black;
 }
+
+
+
+#kdiv_main{
+    grid-area: kdm;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#kdiv_section{
+    grid-area: kds;
+}
+
