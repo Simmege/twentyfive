@@ -142,7 +142,7 @@ body{
     grid-template-rows: 20vh 40vh 40vh;
     grid-template-columns: 10% 70% 20%;
     grid-template-areas:
-    'nav hd kas'
+    'nav hd hd'
     'km km kas'
     'ks ks kas';
 
